@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life on Land | Gallery</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Gallery page only: heading style */
+    .gallery-page-heading {
+      margin-bottom: 8px;
+    }
+
+    /* Gallery page only: intro spacing */
+    .gallery-intro {
+      margin-bottom: 24px;
+    }
+
+    /* Gallery page only: custom detail text */
+    .detail-note {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* Gallery page only: custom font class */
+    .font-serif {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    /* Gallery page only: custom dark theme for modal content */
+    .theme-dark {
+      background: #1c2c3a;
+      color: #f2f7fb;
+    }
+
+    /* Gallery page only: custom light blue theme for modal content */
+    .theme-light {
+      background: #eaf3ff;
+      color: #1c2c3a;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <header>
+    <div class="header-inner">
+      <div class="branding">
+        <img src="logo.png" alt="4Loop Life on Land logo">
+        <div>
+          <h1 class="site-title">Life on Land</h1>
+          <p class="site-subtitle">Gallery of habitats, wildlife and environmental action</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="content_ST1.html">Content 1</a></li>
+          <li><a href="content_ST2.html">Content 2</a></li>
+          <li><a href="content_ST3.html">Content 3</a></li>
+          <li><a href="content_ST4.html">Content 4</a></li>
+          <li><a class="active" href="gallery.html">Gallery</a></li>
+          <li><a href="ais.html">AIS</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="gallery-page-heading">Interactive gallery</h2>
+      <p class="section-intro gallery-intro">
+        This gallery shows examples linked to biodiversity, wildlife, natural habitats and practical action to protect life on land.
+        Click to open the extended view.
+      </p>
+
+      <div class="gallery-grid">
+        <article class="gallery-item">
+          <button type="button"
+            data-image="forest.jpg"
+            data-alt="Forest habitat with tall trees"
+            data-title="Forest habitats"
+            data-text="Forests provide shelter, food and stable habitats for many species. Protecting forests helps biodiversity and reduces land degradation.">
+            <img src="forest.jpg" alt="Forest habitat with tall trees">
+            <div class="gallery-text">
+              <h3>Forest habitats</h3>
+              <p>Healthy forests are vital for wildlife and environmental balance.</p>
+            </div>
+          </button>
+        </article>
+
+        <article class="gallery-item">
+          <button type="button"
+            data-image="fox.jpg"
+            data-alt="Wild fox in a natural habitat"
+            data-title="Wild animals"
+            data-text="Animals depend on safe habitats to survive. Protecting land means protecting the spaces where wildlife can feed, hide and reproduce.">
+            <img src="fox.jpg" alt="Wild fox in a natural habitat">
+            <div class="gallery-text">
+              <h3>Wild animals</h3>
+              <p>Species survival depends on safe and protected habitats.</p>
+            </div>
+          </button>
+        </article>
+
+        <article class="gallery-item">
+          <button type="button"
+            data-image="butterfly.jpg"
+            data-alt="Butterfly on a flower"
+            data-title="Pollinators"
+            data-text="Pollinators such as butterflies are essential for ecosystems. They support plant reproduction and help maintain biodiversity in both rural and urban environments.">
+            <img src="butterfly.jpg" alt="Butterfly on a flower">
+            <div class="gallery-text">
+              <h3>Pollinators</h3>
+              <p>Small species can have a big impact on biodiversity.</p>
+            </div>
+          </button>
+        </article>
+
+        <article class="gallery-item">
+          <button type="button"
+            data-image="tree.jpg"
+            data-alt="People planting trees outdoors"
+            data-title="Tree planting action"
+            data-text="Tree planting is a practical way to support local biodiversity when it is done responsibly and uses suitable species. It can help restore habitats and improve the local environment.">
+            <img src="tree.jpg" alt="People planting trees outdoors">
+            <div class="gallery-text">
+              <h3>Tree planting action</h3>
+              <p>Local action can help restore habitats and support wildlife.</p>
+            </div>
+          </button>
+        </article>
+      </div>
+    </section>
+
+    <div class="modal" id="galleryModal" aria-hidden="true">
+      <div class="modal-content" id="modalPanel">
+        <div class="modal-top">
+          <h3 style="margin: 0;">Gallery detail</h3>
+          <button class="close-btn" id="closeModal" type="button">Close</button>
+        </div>
+
+        <div class="modal-controls">
+          <label for="themePicker">Colour view:</label>
+          <select id="themePicker">
+            <option value="default">Default</option>
+            <option value="light">Light Blue</option>
+            <option value="dark">Dark</option>
+          </select>
+
+          <label for="fontPicker" style="margin-left: 16px;">Font style:</label>
+          <select id="fontPicker">
+            <option value="default">Default</option>
+            <option value="serif">Serif</option>
+          </select>
+        </div>
+
+        <div class="modal-body" id="modalBody">
+          <img id="modalImage" src="forest.jpg" alt="Expanded gallery image">
+          <div>
+            <h3 id="modalTitle">Gallery item</h3>
+            <p id="modalText">More information will appear here when an image is selected.</p>
+            <p class="detail-note">This customisation only changes the extended view, not the whole page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p><strong>4Loop Website</strong> | Life on Land</p>
+      <p>
+        <a href="pageEditor_ST1.html">Page Editor</a> |
+        <a href="validation_ST1.html">Validation</a> |
+        <a href="pageEditor_ST1.html#compliance">Accessibility / Compliance</a>
+      </p>
+      <p>Ambre Mornas | W2178095</p>
+    </div>
+  </footer>
+
+  <a class="go-top" href="#top">Top</a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".gallery-item");
+      const buttons = document.querySelectorAll(".gallery-item button");
+      const modal = document.getElementById("galleryModal");
+      const modalPanel = document.getElementById("modalPanel");
+      const modalBody = document.getElementById("modalBody");
+      const modalImage = document.getElementById("modalImage");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalText = document.getElementById("modalText");
+      const closeModal = document.getElementById("closeModal");
+      const themePicker = document.getElementById("themePicker");
+      const fontPicker = document.getElementById("fontPicker");
+
+      /* JS hover effect so the interaction is not CSS-only */
+      items.forEach(function (item) {
+        item.addEventListener("mouseenter", function () {
+          item.style.transform = "translateY(-5px)";
+          item.style.boxShadow = "0 12px 24px rgba(23, 71, 125, 0.2)";
+        });
+
+        item.addEventListener("mouseleave", function () {
+          item.style.transform = "translateY(0)";
+          item.style.boxShadow = "";
+        });
+
+        item.addEventListener("focusin", function () {
+          item.style.transform = "translateY(-5px)";
+          item.style.boxShadow = "0 12px 24px rgba(23, 71, 125, 0.2)";
+        });
+
+        item.addEventListener("focusout", function () {
+          item.style.transform = "translateY(0)";
+          item.style.boxShadow = "";
+        });
+      });
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          modalImage.src = button.dataset.image;
+          modalImage.alt = button.dataset.alt;
+          modalTitle.textContent = button.dataset.title;
+          modalText.textContent = button.dataset.text;
+          modal.classList.add("show");
+          modal.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      closeModal.addEventListener("click", function () {
+        modal.classList.remove("show");
+        modal.setAttribute("aria-hidden", "true");
+      });
+
+      modal.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.classList.remove("show");
+          modal.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      themePicker.addEventListener("change", function () {
+        modalPanel.classList.remove("theme-light", "theme-dark");
+
+        if (themePicker.value === "light") {
+          modalPanel.classList.add("theme-light");
+        } else if (themePicker.value === "dark") {
+          modalPanel.classList.add("theme-dark");
+        }
+      });
+
+      fontPicker.addEventListener("change", function () {
+        modalBody.classList.remove("font-serif");
+
+        if (fontPicker.value === "serif") {
+          modalBody.classList.add("font-serif");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

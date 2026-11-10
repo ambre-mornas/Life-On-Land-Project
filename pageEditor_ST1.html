@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Editor | Student 1</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .editor-box table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+    }
+
+    .editor-box th,
+    .editor-box td {
+      border: 1px solid var(--border);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .editor-box th {
+      background: #eef5fc;
+      color: var(--primary-dark);
+    }
+   
+    .editor-note {
+      color: var(--muted);
+    }
+
+    .ref-list li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <header>
+    <div class="header-inner">
+      <div class="branding">
+        <img src="logo.png" alt="4Loop Life on Land logo">
+        <div>
+          <h1 class="site-title">Page Editor</h1>
+          <p class="site-subtitle">Student 1 summary of work completed</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="content_ST1.html">Content 1</a></li>
+          <li><a href="content_ST2.html">Content 2</a></li>
+          <li><a href="content_ST3.html">Content 3</a></li>
+          <li><a href="content_ST4.html">Content 4</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="ais.html">AIS</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="editor-box">
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#home-work">Home page</a></li>
+        <li><a href="#gallery-work">Gallery page</a></li>
+        <li><a href="#content-work">Content page</a></li>
+        <li><a href="#challenges">Challenges and lessons learned</a></li>
+        <li><a href="#accessibility">Accessibility</a></li>
+        <li><a href="#compliance">Compliance</a></li>
+        <li><a href="#meetings">Group meetings and contribution log</a></li>
+        <li><a href="#references">References</a></li>
+      </ul>
+    </section>
+
+    <section class="editor-box" id="overview">
+      <h2>Overview</h2>
+      <p><strong>Name:</strong> Ambre Mornas</p>
+      <p><strong>Student ID:</strong> W</p>
+      <p><strong>Role:</strong> Student 1</p>
+
+      <p>
+        My main tasks were creating the shared template, the global CSS, the home page, the gallery page,
+        my own content page, this page editor and my validation page.
+      </p>
+
+      <ul>
+        <li>Created the shared HTML template for the group</li>
+        <li>Created the global stylesheet used across the website</li>
+        <li>Built the Home page</li>
+        <li>Built the Gallery page with JavaScript interaction</li>
+        <li>Built my individual Content page</li>
+        <li>Completed my Page Editor and Validation page</li>
+      </ul>
+    </section>
+
+    <section class="editor-box" id="home-work">
+      <h2>Home page</h2>
+
+      <p>
+        I used the shared template structure for this page so it matched the rest of the website. The page includes a
+        header, navigation bar, main content area and footer. I also kept the same file naming and navigation structure
+        that I shared with the group.
+      </p>
+
+      <p>
+        In the main section, I added three cards to introduce the topic. Each card has a heading, an image and a short
+        piece of text about why life on land matters. I also added a tile section linking to the four student
+        content pages so users can move easily through the site.
+      </p>
+
+      <p>
+        In terms of code, I used semantic HTML such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+        <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code> and <code>&lt;article&gt;</code>. For styling, I used
+        the shared CSS for the overall layout and added a small embedded <code>&lt;style&gt;</code> block for home page only
+        features such as the hero banner and home card images.
+      </p>
+
+      <p>
+        <a href="home.html" target="_blank">Open Home page</a> |
+        <a href="validation_ST1.html#home-val">View Home validation</a>
+      </p>
+    </section>
+
+    <section class="editor-box" id="gallery-work">
+      <h2>Gallery page</h2>
+
+      <p>
+        The gallery page follows the same shared template but includes more interaction. I created a grid of 
+		images, each with a short title and description. When the user clicks a gallery item, JavaScript opens an
+        extended view and inserts the correct image and text.
+      </p>
+
+      <p>
+        I used JavaScript event listeners for the gallery interactions. This includes opening the modal, closing it,
+        and allowing the user to change the colour view and font style inside the extended view only. I used
+        <code>data-</code> attributes in the HTML to store the image, title and text for each item, and then used
+        JavaScript to read that data and display it in the modal.
+      </p>
+
+      <p>
+        For the layout, I used the shared CSS grid styles and then added a few page specific styles in an embedded
+        style block so the gallery page had its own small custom touches without breaking the global design.
+      </p>
+
+      <p>
+        <a href="gallery.html" target="_blank">Open Gallery page</a> |
+        <a href="validation_ST1.html#gallery-val">View Gallery validation</a>
+      </p>
+    </section>
+
+    <section class="editor-box" id="content-work">
+      <h2>Content page</h2>
+
+      <p>
+        My content page is based on the same shared layout, but the content is organised into clear sections with an
+        internal side navigation. This makes it easier to move around the page and helps the user jump straight to the
+        section they want.
+      </p>
+
+      <p>
+        I used section ids for internal linking, an <code>&lt;aside&gt;</code> for the side navigation, and a fixed
+        Top button to return to the top of the page. The page also includes four relevant images with alt text.
+      </p>
+
+      <p>
+        I used the shared CSS to create the two column layout and then added a few small content page specific styles
+        to highlight the introduction and make the page easier to read.
+      </p>
+
+      <p>
+        <a href="content_ST1.html" target="_blank">Open Content page</a> |
+        <a href="validation_ST1.html#content-val">View Content validation</a>
+      </p>
+    </section>
+
+    <section class="editor-box" id="challenges">
+      <h2>Challenges and lessons learned</h2>
+
+      <p>
+        One challenge was keeping the pages consistent while still making them different enough to meet the individual
+        page requirements. I solved this by using one shared stylesheet for the main website structure and then adding
+        page styles only where needed.
+      </p>
+
+      <p>
+        Another challenge was the gallery interaction. I wanted to make sure it was clearly done with JavaScript and
+        not just CSS, because that is part of the marking requirements. Using event listeners and a modal helped me
+        solve that properly.
+      </p>
+
+      <p>
+        From this, I learned that setting up the structure well at the start makes the rest of the coding much
+        easier, especially when working as part of a group.
+      </p>
+    </section>
+
+    <section class="editor-box" id="accessibility">
+      <h2>Accessibility</h2>
+
+      <p>
+        I considered accessibility by using semantic HTML, clear headings, alt text for images, readable colour contrast,
+        and consistent navigation. I also made sure links were easy to recognise and that the top button stayed visible
+        while scrolling.
+      </p>
+
+      <p>
+        On the gallery page, the items can also be focused, not only hovered, which helps keyboard users as well.
+        These choices make the pages easier to use.
+      </p>
+    </section>
+
+    <section class="editor-box" id="compliance">
+      <h2>Compliance</h2>
+
+      <p>
+        The pages I created are educational and appropriate for a university website. I did not include
+		misleading content. I also made sure that external resources such as images are acknowledged
+        in the references section instead of being presented as my own work.
+      </p>
+
+      <p>
+        I also tried to work in an honest way by keeping the content relevant to the coursework and
+        by acknowledging resources that helped me during development.
+      </p>
+    </section>
+    
+    <section class="editor-box" id="meetings">
+      <h2>Group meetings and individual contribution log</h2>
+
+     <table>
+       <tr>
+         <th>Meeting</th>
+         <th>Date & Time</th>
+         <th>Format</th>
+         <th>Objective</th>
+         <th>Attendance</th>
+         <th>My contribution</th>
+      </tr>
+
+      <tr>
+         <td>1</td>
+         <td>12 March 2026</td>
+         <td>In person</td>
+         <td>Initial meeting to assign roles, choose the SDG topic and agree on the general design direction.</td>
+         <td>All group members present</td>
+         <td>Helped define the website structure and confirmed my role as Student 1 (template, CSS, home and gallery).</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>14 March 2026</td>
+        <td>Online (WhatsApp)</td>
+        <td>Discussed initial page layouts and shared first drafts of our individual pages.</td>
+        <td>All group members present</td>
+        <td>Shared my first version of the template and collected feedback from the group.</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>17 March 2026</td>
+        <td>Online (WhatsApp)</td>
+        <td>Checked progress on all pages and confirmed navigation links and file naming.</td>
+        <td>All group members present</td>
+        <td>Updated the navigation and ensured all pages followed the same structure.</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>19 March 2026</td>
+        <td>In person</td>
+        <td>Reviewed the global CSS and template to make sure everyone was happy with the design.</td>
+        <td>All group members present</td>
+        <td>Improved the CSS based on feedback and explained how to use the shared template.</td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>22 March 2026</td>
+        <td>Online (WhatsApp)</td>
+        <td>Final checks on pages and fixing small issues like layout, images and broken links.</td>
+        <td>All group members present</td>
+        <td>Helped fix layout issues and checked that pages were using the shared CSS correctly.</td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td>26 March 2026</td>
+        <td>In person</td>
+        <td>Final meeting to review the full website and prepare everything for submission.</td>
+        <td>All group members present</td>
+        <td>Checked my pages (home, gallery, content) and made sure everything worked with the rest of the site.</td>
+      </tr>
+     </table>
+   </section>
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <p><strong>4Loop Website</strong> | Life on Land</p>
+      <p>
+        <a href="pageEditor_ST1.html">Page Editor</a> |
+        <a href="validation_ST1.html">Validation</a>
+      </p>
+      <p>Ambre Mornas | W</p>
+    </div>
+  </footer>
+
+  <a class="go-top" href="#top">Top</a>
+
+</body>
+</html>
